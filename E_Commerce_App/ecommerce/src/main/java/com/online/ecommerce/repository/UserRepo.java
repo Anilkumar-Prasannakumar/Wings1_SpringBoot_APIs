@@ -1,0 +1,11 @@
+package com.online.ecommerce.repository;
+
+import com.online.ecommerce.model.UserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface UserRepo extends JpaRepository<UserInfo, Integer> {
+    Optional<UserInfo> findByUsername(String username);
+}
